@@ -1,4 +1,5 @@
 ﻿using inventory_api.Dto;
+using inventory_api.Exceptions;
 using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections;
@@ -14,29 +15,37 @@ namespace inventory_api.Services.Strategies.Concretes
         //Clasificacion de animales por inicio de primer caracter con "b"
         public InventoryDTO classify(List<string> animals)
         {
-            var Bovinos = new List<string>();
-            var Equinos = new List<string>();
-
-            //Recorremos los animales del inventario
-            foreach (var animal in animals)
+            try
             {
-                //Validamos si empiezan por "b" son bovinos
-                if (animal.StartsWith("b"))
+                var Bovinos = new List<string>();
+                var Equinos = new List<string>();
+
+                //Recorremos los animales del inventario
+                foreach (var animal in animals)
                 {
-                    Bovinos.Add(animal);
+                    //Validamos si empiezan por "b" son bovinos
+                    if (animal.StartsWith("b"))
+                    {
+                        Bovinos.Add(animal);
+                    }
+                    else
+                    {
+                        Equinos.Add(animal);
+                    }
                 }
-                else
-                {
-                    Equinos.Add(animal);
-                }
+
+                //Armamos el inventario distribuido
+                var inventory = new InventoryDTO();
+                inventory.Bovinos = Bovinos;
+                inventory.Equinos = Equinos;
+
+                return inventory;
             }
-
-            //Armamos el inventario distribuido
-            var inventory = new InventoryDTO();
-            inventory.Bovinos = Bovinos;
-            inventory.Equinos = Equinos;
-
-            return inventory;
+            catch(System.Exception ex)
+            {
+                throw new InventoryException("Error clasificando el inventario "+ ex.Message);
+            }
+            
         }
     }
 }
