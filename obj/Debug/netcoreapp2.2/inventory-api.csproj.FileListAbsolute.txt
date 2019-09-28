@@ -1,0 +1,14 @@
+C:\Users\Meyling\Documents\proyectos\inventory-api\bin\Debug\netcoreapp2.2\inventory-api.deps.json
+C:\Users\Meyling\Documents\proyectos\inventory-api\bin\Debug\netcoreapp2.2\inventory-api.runtimeconfig.json
+C:\Users\Meyling\Documents\proyectos\inventory-api\bin\Debug\netcoreapp2.2\inventory-api.runtimeconfig.dev.json
+C:\Users\Meyling\Documents\proyectos\inventory-api\bin\Debug\netcoreapp2.2\inventory-api.dll
+C:\Users\Meyling\Documents\proyectos\inventory-api\obj\Debug\netcoreapp2.2\inventory-api.csprojAssemblyReference.cache
+C:\Users\Meyling\Documents\proyectos\inventory-api\obj\Debug\netcoreapp2.2\inventory-api.csproj.CoreCompileInputs.cache
+C:\Users\Meyling\Documents\proyectos\inventory-api\obj\Debug\netcoreapp2.2\inventory-api.RazorAssemblyInfo.cache
+C:\Users\Meyling\Documents\proyectos\inventory-api\obj\Debug\netcoreapp2.2\inventory-api.RazorAssemblyInfo.cs
+C:\Users\Meyling\Documents\proyectos\inventory-api\obj\Debug\netcoreapp2.2\inventory-api.AssemblyInfoInputs.cache
+C:\Users\Meyling\Documents\proyectos\inventory-api\obj\Debug\netcoreapp2.2\inventory-api.AssemblyInfo.cs
+C:\Users\Meyling\Documents\proyectos\inventory-api\obj\Debug\netcoreapp2.2\inventory-api.RazorTargetAssemblyInfo.cache
+C:\Users\Meyling\Documents\proyectos\inventory-api\bin\Debug\netcoreapp2.2\inventory-api.pdb
+C:\Users\Meyling\Documents\proyectos\inventory-api\obj\Debug\netcoreapp2.2\inventory-api.dll
+C:\Users\Meyling\Documents\proyectos\inventory-api\obj\Debug\netcoreapp2.2\inventory-api.pdb
