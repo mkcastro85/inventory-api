@@ -12,9 +12,14 @@ namespace inventory_api.Services.Implement
 {
     public class UploadInventorySerciceImpl : IUploadInventoryService
     {
+        private Context context;
+        public UploadInventorySerciceImpl()
+        {
+            context= new Context(new ClassifyConcreteDefault());
+        }
         public InventoryDTO classify(IFormFile formFile)
         {
-            Context context;
+            
             //Obtenemos los animales del archivo
             var fileSystemHelper = new FileSystemHelper();
             var animals = fileSystemHelper.getAll(formFile);
@@ -24,7 +29,6 @@ namespace inventory_api.Services.Implement
              * Creamos una estrategia debido al requisito de poder cambiar la implementacion
              * o la manera de clasificar los animales
              */
-            context = new Context(new ClassifyConcreteDefault());
             var inventory=context.ContextInterface(animals);
             //Guardamos el inventario distribuido
             fileSystemHelper.createFile(inventory.Bovinos,"Bovinos");
